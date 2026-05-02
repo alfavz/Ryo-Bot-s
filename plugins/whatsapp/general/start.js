@@ -4,9 +4,9 @@ const { font1 } = require(global.root("lib/font.js"));
 
 let handler = async (m, { conn, config }) => {
   try {
-    const botName = config.botName || "Lilith-Bots";
+    const botName = config.botName || "Ryo Bot";
     const userName = m.pushName || "User";
-    const sourceUrl = "https://whatsapp.com/channel/0029VbB1IEFICVft683rXG1P"; 
+    const sourceUrl = "https://whatsapp.com/channel/0029VbB1IEFICVft683rXG1P";
     const thumbnailUrl = fs.readFileSync(global.root("img/p1.jpg"));
 
     const cpu = os.cpus()[0];
@@ -27,20 +27,26 @@ let handler = async (m, { conn, config }) => {
     const text = `Hello, ${userName}!
 I am ${botName}, ready to serve you.
 ${msg}`;
-        
-  await conn.sendMessage(m.chat, {
+
+    await conn.sendMessage(
+      m.chat,
+      {
         text: font1(text),
         contextInfo: {
-            externalAdReply: {
-                title: font1(botName),
-                body: font1(`Version ${require(global.root('package.json')).version}`),
-                thumbnail: thumbnailUrl,
-                sourceUrl: sourceUrl,
-                mediaType: 1,
-                renderLargerThumbnail: true
-            }
-        }
-    }, { quoted: m });
+          externalAdReply: {
+            title: font1(botName),
+            body: font1(
+              `Version ${require(global.root("package.json")).version}`,
+            ),
+            thumbnail: thumbnailUrl,
+            sourceUrl: sourceUrl,
+            mediaType: 1,
+            renderLargerThumbnail: true,
+          },
+        },
+      },
+      { quoted: m },
+    );
   } catch (e) {
     m.reply(e.message);
   }

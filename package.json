@@ -4,7 +4,8 @@
   "description": "a bot telegram & discord & whatsapp multi purpose",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "setup-config": "node scripts/setup-config.js"
   },
   "keywords": [],
   "author": "Fareza",

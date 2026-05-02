@@ -14,7 +14,7 @@ let handler = async (m, { conn, config, commands }) => {
 
     const thumbnailUrl = fs.readFileSync(global.root("img/p1.jpg"));
 
-    const botName = config.botName || "Lilith Bot";
+    const botName = config.botName || "Ryo Bot";
     const sourceUrl = "https://whatsapp.com/channel/0029VbB1IEFICVft683rXG1P";
 
     let menuText = `*hi, ${m.pushName || "user"}!* 👋\n`;

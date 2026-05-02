@@ -1,7 +1,7 @@
-# 🌌 Lilith Bot's (Multi-Platform)
+# 🌌 Ryo Bot's (Multi-Platform)
 
 <div align="center">
-  <img src="img/p0.png" alt="Lilith Bot Banner" width="100%" style="border-radius: 10px;"/>
+  <img src="img/p0.png" alt="Ryo Bot Banner" width="100%" style="border-radius: 10px;"/>
   <br/><br/>
   
   [![Node.js](https://img.shields.io/badge/Node.js-v20+-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
@@ -19,52 +19,71 @@
 
 ## 📑 Tentang Project
 
-**Lilith Bot's** adalah bot modular canggih yang dibangun di atas Node.js. Proyek ini memungkinkan Anda menjalankan satu *core* bot yang terhubung secara simultan ke tiga platform chatting terbesar. 
+**Ryo Bot's** adalah bot modular canggih yang dibangun di atas Node.js. Proyek ini memungkinkan Anda menjalankan satu _core_ bot yang terhubung secara simultan ke tiga platform chatting terbesar.
 
 Dilengkapi dengan **AiDev** (Asisten Coding berbasis Gemini AI), **Media Downloader**, dan sistem **Plugin Hot-Reload** yang memungkinkan Anda menambah fitur tanpa perlu me-restart bot.
 
 ## ✨ Fitur Unggulan
 
-| Fitur | Deskripsi | Platform |
-| :--- | :--- | :---: |
-| 🧠 **AiDev Assistant** | Asisten coding & chat pintar berbasis **Google Gemini 2.0 Flash**. Memiliki memori percakapan (Session). | ✅ Semua |
-| 📥 **Universal Downloader** | Download video **TikTok** (No WM), YouTube, dan platform lainnya dengan cepat. | ✅ Semua |
-| 🖼️ **Image Tools** | HD/Upscale gambar, Fake Story Generator, dan manipulasi gambar lainnya. | ✅ Semua |
-| 🔌 **Modular System** | Tambah fitur cukup dengan membuat file `.js` baru di folder plugins. | ⚙️ Core |
-| 🔄 **Hot-Reload** | Update script plugin secara *real-time* tanpa restart server. | ⚙️ Core |
+| Fitur                       | Deskripsi                                                                                                | Platform |
+| :-------------------------- | :------------------------------------------------------------------------------------------------------- | :------: |
+| 🧠 **AiDev Assistant**      | Asisten coding & chat pintar berbasis **Google Gemini 2.0 Flash**. Memiliki memori percakapan (Session). | ✅ Semua |
+| 📥 **Universal Downloader** | Download video **TikTok** (No WM), YouTube, dan platform lainnya dengan cepat.                           | ✅ Semua |
+| 🖼️ **Image Tools**          | HD/Upscale gambar, Fake Story Generator, dan manipulasi gambar lainnya.                                  | ✅ Semua |
+| 🔌 **Modular System**       | Tambah fitur cukup dengan membuat file `.js` baru di folder plugins.                                     | ⚙️ Core  |
+| 🔄 **Hot-Reload**           | Update script plugin secara _real-time_ tanpa restart server.                                            | ⚙️ Core  |
 
 ---
 
 ## 🛠️ Prasyarat
 
 Sebelum memulai, pastikan Anda telah menginstal:
-* [Node.js](https://nodejs.org/en/download/) (Versi 20 atau lebih baru)
-* [FFmpeg](https://ffmpeg.org/download.html) (Untuk manipulasi media video/audio)
-* Git
-* Javascript & NodeJS basic skill
+
+- [Node.js](https://nodejs.org/en/download/) (Versi 20 atau lebih baru)
+- [FFmpeg](https://ffmpeg.org/download.html) (Untuk manipulasi media video/audio)
+- Git
+- Javascript & NodeJS basic skill
   > DON'T BE AN IDIOT
-  
+
 ---
 
 ## 🚀 Instalasi & Penggunaan
 
 1.  **Clone Repository**
+
     ```bash
-    git clone https://github.com/FlowFalcon/Lilith-Bot-s.git
-    cd Lilith-Bot-s
+    git clone https://github.com/alfavz/Ryo-Bot-s.git
+    cd Ryo-Bot-s
     ```
 
 2.  **Instal Dependensi**
+
     ```bash
     npm install
     ```
 
-3.  **Konfigurasi Bot**
-    edit file `config.js`:
+3.  **Siapkan Konfigurasi**
+
+    ```bash
+    npm run setup-config
+    ```
+
+4.  **Jalankan Bot**
+
+    ```bash
+    npm start
+    ```
+
+    > **Catatan untuk WhatsApp:** > Saat pertama kali dijalankan, kode pairing akan muncul di terminal. Masukkan kode tersebut di menu _Linked Devices_ WhatsApp Anda.
+
+---
+
+## 📂 Struktur Project
+
     ```javascript
     global.config = {
       // --- PLATFORM SWITCH ---
-      enableTelegram: true,  // Set false jika tidak dipakai
+      enableTelegram: true, // Set false jika tidak dipakai
       enableDiscord: true,
       enableWhatsApp: true,
 
@@ -72,7 +91,7 @@ Sebelum memulai, pastikan Anda telah menginstal:
       telegramToken: "TOKEN_TELEGRAM_ANDA",
       discordToken: "TOKEN_DISCORD_ANDA",
       discordClientId: "CLIENT_ID_DISCORD_ANDA", // Wajib untuk Slash Commands
-      
+
       // --- GEMINI AI (Wajib untuk fitur AiDev) ---
       geminikey: "AIzaSy...", // Ambil di aistudio.google.com
 
@@ -80,17 +99,18 @@ Sebelum memulai, pastikan Anda telah menginstal:
       ownerWhatsapp: "628xxx", // Format internasional tanpa +
       ownerTelegram: "ID_TELEGRAM",
       ownerDiscord: "ID_DISCORD",
-      
-      botName: "Lilith Bot",
+
+      botName: "Ryo Bot",
     };
     ```
 
 4.  **Jalankan Bot**
+
     ```bash
     npm start
     ```
 
-    > **Catatan untuk WhatsApp:** > Saat pertama kali dijalankan, kode pairing akan muncul di terminal. Masukkan kode tersebut di menu *Linked Devices* WhatsApp Anda.
+    > **Catatan untuk WhatsApp:** > Saat pertama kali dijalankan, kode pairing akan muncul di terminal. Masukkan kode tersebut di menu _Linked Devices_ WhatsApp Anda.
 
 ---
 
@@ -99,7 +119,7 @@ Sebelum memulai, pastikan Anda telah menginstal:
 Struktur folder dirancang agar rapi dan mudah dikembangkan:
 
 ```
-lilith-bot/
+ryo-bot/
 ├── bot/
 │   ├── lib/              # Library inti (Handler, Logger, Baileys Helper)
 │   ├── plugins/          # TEMPAT FITUR ANDA BERADA
@@ -110,13 +130,13 @@ lilith-bot/
 │   ├── config.js         # Konfigurasi utama
 │   └── index.js          # Main entry point
 └── package.json
-````
+```
 
------
+---
 
 ## 🧩 Cara Membuat Plugin
 
-Sistem plugin Lilith Bot sangat fleksibel. Berikut adalah contoh cara membuat fitur sederhana.
+Sistem plugin Ryo Bot sangat fleksibel. Berikut adalah contoh cara membuat fitur sederhana.
 
 <details>
 <summary><b>🟢 Klik untuk melihat contoh Plugin WhatsApp</b></summary>
@@ -130,8 +150,8 @@ let handler = async (m, { conn, args }) => {
 };
 
 handler.command = ["halo", "hi"]; // Command pemicu
-handler.tags = ["main"];          // Kategori di menu
-handler.help = ["halo"];          // Deskripsi di menu
+handler.tags = ["main"]; // Kategori di menu
+handler.help = ["halo"]; // Deskripsi di menu
 
 module.exports = handler;
 ```
@@ -177,17 +197,17 @@ module.exports = handler;
 
 </details>
 
------
+---
 
 ## 🤝 Kontribusi & Credits
 
-Dibuat dengan ❤️ oleh **Fathur** (FlowFalcon).
+Dibuat dengan ❤️ oleh **Fathur** (FlowFalcon) dan **Fareza**.
 Terima kasih kepada komunitas open-source untuk library luar biasa:
 
-  * [Baileys](https://github.com/WhiskeySockets/Baileys)
-  * [Telegraf](https://telegraf.js.org)
-  * [Discord.js](https://discord.js.org)
+- [Baileys](https://github.com/WhiskeySockets/Baileys)
+- [Telegraf](https://telegraf.js.org)
+- [Discord.js](https://discord.js.org)
 
------
+---
 
 > **Note:** Gunakan bot ini dengan bijak. Penyalahgunaan fitur (spamming, dsb) dapat menyebabkan akun Anda diblokir oleh pihak platform terkait.
